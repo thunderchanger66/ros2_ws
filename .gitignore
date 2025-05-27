@@ -1,0 +1,31 @@
+# ROS2 colcon build
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.bak
+
+# VSCode/IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# 数据/模型/特征文件（如不想提交）
+src/show_py/Resources/featureDB/
+src/show_py/Resources/featureMean/
+src/show_py/Resources/faceS/
+src/show_py/Resources/*.csv
+
+# Jupyter/Notebook
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
