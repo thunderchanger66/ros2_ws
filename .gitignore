@@ -19,8 +19,13 @@ __pycache__/
 
 # 数据/模型/特征文件（如不想提交）
 src/show_py/Resources/featureDB/
+!src/show_py/Resources/featureDB/.gitkeep
+
 src/show_py/Resources/featureMean/
+!src/show_py/Resources/featureMean/.gitkeep
+
 src/show_py/Resources/faceS/
+!src/show_py/Resources/faceS/.gitkeep
 src/show_py/Resources/*.csv
 
 # Jupyter/Notebook
