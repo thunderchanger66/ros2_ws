@@ -1,8 +1,5 @@
 # 注意事项
-show_py为主要功能包，test.py为可以使用的代码  
-ai_msgs为适配RDK发送的自定义消息  
-show_image为前期c++测试功能包  
-需要先放入照片至show_py/Resources/faceS/<your_name>/，运行getFaceDB.py存入数据  
+start_detect集成了人脸检测和结果展示  
 
 # 安装依赖
 python inquirements: dlib scikit-image opencv-python numpy pandas  
@@ -12,4 +9,4 @@ colcon build
 source ./install/setup.bash  
 
 # 启动
-ros2 run show_py test  
+ros2 launch start_detect run_all.launch.py
