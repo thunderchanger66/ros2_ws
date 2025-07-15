@@ -20,7 +20,7 @@ def generate_launch_description():
     configuration_directory = LaunchConfiguration('configuration_directory',default= os.path.join(pkg_share, 'config') )
     # 配置文件
     configuration_basename = LaunchConfiguration('configuration_basename', default='carto_2d.lua')
-    # rviz_config_dir = os.path.join(pkg_share, 'config')+"/cartographer.rviz"
+    rviz_config_dir = os.path.join(pkg_share,'rviz','robot.rviz')
     # print(f"rviz config in {rviz_config_dir}")
 
     
@@ -42,18 +42,18 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}],
         arguments=['-resolution', resolution, '-publish_period_sec', publish_period_sec])
 
-    # rviz_node = Node(
-    #     package='rviz2',
-    #     executable='rviz2',
-    #     name='rviz2',
-    #     arguments=['-d', rviz_config_dir],
-    #     parameters=[{'use_sim_time': use_sim_time}],
-    #     output='screen')
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', rviz_config_dir],
+        parameters=[{'use_sim_time': use_sim_time}],
+        output='screen')
 
     #===============================================定义启动文件========================================================
     ld = LaunchDescription()
     ld.add_action(cartographer_node)
     ld.add_action(cartographer_occupancy_grid_node)
-    #ld.add_action(rviz_node)
+    ld.add_action(rviz_node)
 
     return ld
