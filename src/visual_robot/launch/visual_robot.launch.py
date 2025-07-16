@@ -10,7 +10,7 @@ def generate_launch_description():
         'ahpu_robot.urdf'
     )
 
-    rviz2_config = os.path.join(get_package_share_directory('visual_robot'),'rviz','lslidar.rviz')
+    rviz2_config = os.path.join(get_package_share_directory('visual_robot'),'rviz','test.rviz')
 
     return LaunchDescription([
         # Node(
@@ -18,8 +18,7 @@ def generate_launch_description():
         #     executable='robot_state_publisher',
         #     name='robot_state_publisher',
         #     output='screen',
-        #     parameters=[{'robot_description': open(urdf_file).read()},
-        #                 {'publish_frequency': 22.0}  # 设置为10Hz，可根据需要调整
+        #     parameters=[{'robot_description': open(urdf_file).read()}
         #                 ]
         # ),
         # Node(
@@ -27,10 +26,9 @@ def generate_launch_description():
         #     executable='joint_state_publisher',
         #     name='joint_state_publisher',
         #     output='screen',
-        #     parameters=[{'robot_description': open(urdf_file).read()},
-        #                  {'rate': 22.0}  # 🔺设置 joint_states 发布频率
+        #     parameters=[{'robot_description': open(urdf_file).read()}
         #                 ]
-        # ),
+        # )
         Node(
             package='rviz2',
             executable='rviz2',

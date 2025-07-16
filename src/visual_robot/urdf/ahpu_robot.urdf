@@ -86,7 +86,7 @@
   </joint>
 
   <!-- 激光雷达link -->
-<link name="laser">
+<link name="laser_link">
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
@@ -101,7 +101,7 @@
 <!-- 激光雷达固定关节 -->
 <joint name="laser_joint" type="fixed">
   <parent link="base_link"/>
-  <child link="laser"/>
+  <child link="laser_link"/>
   <origin xyz="0.2 0 0.15" rpy="0 0 0"/>
 </joint>
 

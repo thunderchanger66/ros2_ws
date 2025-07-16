@@ -48,6 +48,6 @@ def generate_launch_description():
     return LaunchDescription([
         cartographer_node,
         cartographer_occupancy_grid_node,
-        #rviz_node
+        rviz_node
     ])
 

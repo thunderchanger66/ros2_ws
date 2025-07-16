@@ -40,6 +40,7 @@ options = {
   fixed_frame_pose_sampling_ratio = 1.,
   imu_sampling_ratio = 1.,
   landmarks_sampling_ratio = 1.,
+  publish_tracked_pose = true,
 }
 
 return options
